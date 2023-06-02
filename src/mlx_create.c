@@ -6,7 +6,7 @@
 /*   By: mkaplan <@student.42kocaeli.com.tr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 21:59:41 by mkaplan           #+#    #+#             */
-/*   Updated: 2023/05/30 13:51:21 by mkaplan          ###   ########.fr       */
+/*   Updated: 2023/06/01 10:46:27 by mkaplan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	image_create(t_data *data)
 {
-	data->img.bg = mlx_xpm_file_to_image(data->mlx, "img/bacgraund_grass.xpm",
+	data->img.bg = mlx_xpm_file_to_image(data->mlx, "textures/bg_grass.xpm",
 			&data->img.img_w, &data->img.img_h);
-	data->img.coin = mlx_xpm_file_to_image(data->mlx, "img/collectible.xpm",
+	data->img.coin = mlx_xpm_file_to_image(data->mlx, "textures/c.xpm",
 			&data->img.img_w, &data->img.img_h);
-	data->img.wall = mlx_xpm_file_to_image(data->mlx, "img/wall.xpm",
+	data->img.wall = mlx_xpm_file_to_image(data->mlx, "textures/wall.xpm",
 			&data->img.img_w, &data->img.img_h);
-	data->img.door = mlx_xpm_file_to_image(data->mlx, "img/door.xpm",
+	data->img.door = mlx_xpm_file_to_image(data->mlx, "textures/door.xpm",
 			&data->img.img_w, &data->img.img_h);
-	data->img.character = mlx_xpm_file_to_image(data->mlx, "img/character.xpm",
+	data->img.character = mlx_xpm_file_to_image(data->mlx, "textures/p.xpm",
 			&data->img.img_w, &data->img.img_h);
 }
 
@@ -71,15 +71,13 @@ static void	data_init(t_data *data)
 
 void	mlx_create(t_data *data)
 {
-	int	print_is_active;
-
 	data_init(data);
 	image_create(data);
 	map_read(data);
 	map_bacgraund_put(data);
 	map_create(data);
 	wall_control(data);
-	placeholder(data, data->exit_x, data->exit_y, print_is_active);
+	placeholder(data, data->exit_x, data->exit_y);
 	if (data->i_map.read_count != data->coin_count + 1)
 		err_msg("Error\nThe map is wrong");
 	min_element_control(data);

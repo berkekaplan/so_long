@@ -6,7 +6,7 @@
 /*   By: mkaplan <@student.42kocaeli.com.tr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 21:59:52 by mkaplan           #+#    #+#             */
-/*   Updated: 2023/05/08 12:40:18 by mkaplan          ###   ########.fr       */
+/*   Updated: 2023/06/01 10:48:07 by mkaplan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	int_map_free(int **int_map, t_data *list)
 	free(int_map);
 }
 
-void	placeholder(t_data *list, int x, int y, int print_active)
+void	placeholder(t_data *list, int x, int y)
 {
 	int	**int_map;
 	int	i;

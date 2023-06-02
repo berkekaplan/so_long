@@ -6,7 +6,7 @@
 /*   By: mkaplan <@student.42kocaeli.com.tr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 22:00:03 by mkaplan           #+#    #+#             */
-/*   Updated: 2023/05/31 19:11:01 by mkaplan          ###   ########.fr       */
+/*   Updated: 2023/06/01 10:46:42 by mkaplan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void		exit_door(t_data *data);
 void		map_bacgraund_put(t_data *data);
 void		map_put(int i, int j, t_data *data);
 void		min_element_control(t_data *data);
-void		placeholder(t_data *list, int x, int y, int print_is_active);
+void		placeholder(t_data *list, int x, int y);
 void		wall_control(t_data *data);
 void		free_map(char **map, int map_height);
 void		destroy_img(t_data *data);

@@ -6,7 +6,7 @@
 /*   By: mkaplan <@student.42kocaeli.com.tr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 21:59:36 by mkaplan           #+#    #+#             */
-/*   Updated: 2023/05/08 09:58:59 by mkaplan          ###   ########.fr       */
+/*   Updated: 2023/06/01 10:09:26 by mkaplan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	tmp_control(char *map_name, t_data *data)
 {
 	int		fd;
 
-	fd = open(ft_strjoin("map/", map_name), O_RDONLY);
+	fd = open(ft_strjoin("maps/", map_name), O_RDONLY);
 	if (fd == -1)
 		err_msg("Error\nMap file is not found");
 	if (!map_name)
@@ -41,7 +41,7 @@ void	map_control(char **argv, t_data *data)
 	if (argv[1] == NULL)
 		err_msg("Error\nNo map file");
 	map_name = argv[1];
-	map_names = ft_strjoin("map/", map_name);
+	map_names = ft_strjoin("maps/", map_name);
 	data->map_tmp = map_names;
 	free(map_names);
 	ber_control(argv[1], data);
